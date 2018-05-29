@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>MTinyPng</title>
+    <link rel="stylesheet" href="./assets/dist/style.css">
+    <style>
+        html,body {
+            width: 100%;
+            height: 100%;
+            -webkit-app-region: drag;
+        }
+    </style>
+</head>
+
+<body>
+    <ul class="mtiny-title">
+        <li class="mtiny-title-item">设置</li>
+        <li class="mtiny-title-item J_mtiny_mini">最小化</li>
+        <li class="mtiny-title-item J_mtiny_close">退出</li>
+    </ul>
+
+    <div class="mtiny-box" id="J_mtiny_box">
+        <div class="mtiny-box-step J_mtiny_step"></div>
+        <p class="mtiny-box-tips J_mtiny_tips">Drop your .png or .jpg files here!</p>
+        <p class="mtiny-box-tips mtiny-box-subtips J_mtiny_subtips">Up to 20 images, max 5 MB each.</p>
+    </div>
+
+    <script src="./assets/dist/app.js"></script>
+</body>
+
+</html>

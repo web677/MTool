@@ -1,0 +1,28 @@
+{
+    "name": "mtinypng",
+    "version": "0.0.1",
+    "description": "",
+    "main": "main.js",
+    "scripts": {
+        "build": "webpack && cleancss -o ./src/assets/dist/style.css ./src/assets/css/style.css"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "jquery": "^3.3.1",
+        "tinify": "^1.5.0"
+    },
+    "devDependencies": {
+        "babel-cli": "^6.26.0",
+        "babel-core": "^6.26.3",
+        "babel-loader": "^7.1.4",
+        "babel-preset-es2015": "^6.24.1",
+        "babel-preset-react": "^6.24.1",
+        "clean-css-cli": "^4.1.11",
+        "css-loader": "^0.28.11",
+        "file-loader": "^1.1.11",
+        "style-loader": "^0.21.0",
+        "url-loader": "^1.0.1"
+    }
+}
