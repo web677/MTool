@@ -11,22 +11,22 @@ body {
 
 
 .tiny-box {
-    width: 350px;
-    height: 190px;
-    margin: 50px auto 0;
+    width: 450px;
+    height: 278px;
+    margin: 80px auto 0;
     border: 1.5px dashed #616778;
     border-radius: 15px;
 }
 
 .tiny-box-step {
-    width: 150px;
-    height: 56px;
+    width: 200px;
+    height: 100px;
     margin: 50px auto 20px;
-    background: url(../images/main-bg.png) no-repeat center center / 60px;
+    background: url(../images/main-bg.png) no-repeat center center / 80px;
 }
 
 .tiny-box-step.dealling {
-    background: url(../images/tinify.png) no-repeat center center / 120px;
+    background: url(../images/tinify.png) no-repeat center center / 160px;
 }
 
 .tiny-box-tips {

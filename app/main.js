@@ -15,7 +15,7 @@ function createWinow() {
         frame: false,
         resizable: false,
         show: false,
-        opacity: 0.9,
+        opacity: 0.95,
         titleBarStyle: 'hiddenInset'
     })
 
