@@ -4,12 +4,29 @@
 <head>
     <meta charset="UTF-8">
     <title>Sites</title>
-    <link rel="stylesheet" href="../static/site.css">
+    <link rel="stylesheet" href="../static/sites.css">
 </head>
 
 <body>
-    <div class="sites-container flex">
-        测试
+    <div id="J_sites" class="sites-page flex">
+        <ul class="sites-nav">
+            <li class="sites-nav-title">MTool前端导航</li>
+            <li class="sites-nav-item" v-for="(item, key) in keys" :key="key">{{item}}</li>
+        </ul>
+
+        <div class="sites-container flex-1">
+            <h3 class="sites-bread">{{keys[current]}}</h3>
+            <ul class="sites-box flex">
+                <li class="sites-item" v-for="(site, key) in sites[current]" :key="key">
+                    <img class="site-logo" :src="site.logo" />
+                    <div class="site-detail">
+                        <p class="site-name">{{site.name}}</p>
+                        <p class="site-description">{{site.description}}</p>
+                        <p class="site-collect flex"><span class="flex-1">MTool</span><i></i></p>
+                    </div>
+                </li>
+            </ul>
+        </div>
     </div>
 
     <script src="../static/sites.js"></script>

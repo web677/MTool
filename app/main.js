@@ -24,6 +24,7 @@ function createWinow() {
     })
 
     mainWindow.loadURL('file://' + __dirname + '/src/index.html')
+    // mainWindow.loadURL('file://' + __dirname + '/src/sites.html')
 
     mainWindow.webContents.openDevTools()
 

@@ -23,25 +23,16 @@ module.exports = {
             callback();
         }
     ],
+    resolve: {
+        alias: {
+            'vue$': 'vue/dist/vue.esm.js'
+        }
+    },
     target: 'electron-renderer',
     module: {
         rules: [{
             test: /\.js$/,
             use: 'babel-loader'
         }]
-    },
-    plugins: [
-        new HtmlWebpackPlugin({
-            title: 'sites',
-            template: "./src/template.html",
-            filename: './src/sites.html',
-            minify: {
-                    removeComments: true,
-                    collapseWhitespace: true,
-                    removeAttributeQuotes: true
-                },
-            chunksSortMode: 'dependency',
-            chunks: ['sites']
-        })
-    ]
+    }
 }
