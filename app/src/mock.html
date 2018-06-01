@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>mock</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../static/codemirror.css">
+    <link rel="stylesheet" href="../static/mock.css">
+
+    <!-- <script src="../src/assets/lib/jquery.js"></script> -->
+    <script src="../src/assets/lib/jsonlint.js"></script>
+    <script src="../src/assets/lib/codemirror.min.js"></script>
+    <script src="../src/assets/lib/lint.js"></script>
+    <script src="../src/assets/lib/json-lint.js"></script>
+    <script src="../src/assets/lib/javascript.min.js"></script>
+
+</head>
+
+<body>
+    <textarea id="J_json_editor" name="editor"></textarea>
+    <div class="options-box">
+        请选择请求的协议类型：
+        <label class="radio-protocol">
+            <input type="radio" name="protocol" class="J_protocol" value="http" checked>http</label>
+        <label class="radio-protocol">
+            <input type="radio" name="protocol" class="J_protocol" value="https">https</label>
+    </div>
+    <label class="options-box">
+        请添加当前接口的描述：
+        <input class="options-input" type="text" name="des" id="J_description">
+    </label>
+    <button id="J_mock" class="btn-mock">Mock It</button>
+
+    <div class="result-box flex">
+        <input type="text" name="result" id="J_result" class="mock-result flex-1" readonly value="">
+        <button class="button-copy J_copy">复制</button>
+    </div>
+
+    <div class="request-box">
+        <h3>最近访问</h3>
+        <p class="request-box-tips">超过
+            <b>30</b>天没有访问的接口会被删除</p>
+        <ul class="request-list J_history">
+            <li class="request-item flex">
+                <p class="flex-1">接口链接</p>
+                <p class="flex-1">接口描述</p>
+                <p class="request-item-remove">操作</p>
+            </li>
+            <li class="request-item request-empty">
+                <p class="flex-1">暂无数据</p>
+            </li>
+        </ul>
+    </div>
+
+    <input type="hidden" name="mockid" id="J_mock_id" value="">
+
+</body>
+<script src="../static/mock.js"></script>
+
+</html>

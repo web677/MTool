@@ -1,12 +1,12 @@
 {
-    "name": "mtinypng",
+    "name": "mtool",
     "version": "0.0.1",
     "description": "基于TinyPng的图片压缩工具",
     "main": "index.js",
     "scripts": {
         "build": "cd app && npm run build && cd ..",
         "start": "npm run build && electron ./app .",
-        "pack": "npm run build && electron-packager ./app 'MTinyPng' --platform=mas --overwrite --out='./dist' --icon='./app/src/assets/images/mtiny.icns'"
+        "pack": "npm run build && electron-builder ./app 'MTool' --platform=mac"
     },
     "repository": {
         "type": "git",
@@ -22,8 +22,32 @@
     "devDependencies": {
         "babel-preset-es2015": "^6.24.1",
         "electron": "^2.0.2",
-        "electron-packager": "^12.1.0",
+        "electron-builder": "^20.15.1",
         "tinify": "^1.5.0"
     },
-    "dependencies": {}
+    "dependencies": {},
+    "build": {
+        "appId": "com.mtool.app.imaopao",
+        "copyright": "imaopao",
+        "productName": "MTool",
+        "directories": {
+            "output": "./dist"
+        },
+        "dmg": {
+            "window": {
+                "x": 100,
+                "y": 100,
+                "width": 500,
+                "height": 300
+            }
+        },
+        "mac": {
+             "category": "com.mtool.app.imaopao",
+             "icon": "./app/src/assets/images/mtiny.icns",
+             "target": [
+                 "zip",
+                 "dmg"
+             ]
+         }
+    }
 }

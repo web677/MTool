@@ -21,11 +21,7 @@ ul {
 }
 
 body {
-    font: 14px/1.5,
-    "STKaiti",
-    "KaiTi",
-    "Helvetica Neue",
-    Arial;
+    font: 14px/1.5, "STKaiti", "KaiTi", "Helvetica Neue", Arial;
     background: #f5f5f5;
     color: #333;
 }
@@ -36,10 +32,7 @@ select,
 textarea {
     vertical-align: middle;
     font-size: 12px;
-    font-family: "STKaiti",
-    "KaiTi",
-    "Helvetica Neue",
-    Arial;
+    font-family: "STKaiti", "KaiTi", "Helvetica Neue", Arial;
 }
 
 header,
@@ -61,10 +54,7 @@ h5,
 h6 {
     font-size: 100%;
     font-weight: normal;
-    font-family: "STKaiti",
-    "KaiTi",
-    "Helvetica Neue",
-    Arial;
+    font-family: "STKaiti", "KaiTi", "Helvetica Neue", Arial;
 }
 
 ol,
@@ -139,70 +129,13 @@ a {
     box-sizing: border-box;
 }
 
-/* index.html */
-body{
-    background: linear-gradient(to bottom, #c6dde4, #fefeff);
-    background: url(../images/body-bg.png) no-repeat center center / 100% 100%;
-}
-
-.mtiny-title{
-    display: flex;
+html,
+body {
     width: 100%;
-    height: 60px;
-    background: rgba(255,255,255,0.8);
-    box-shadow: 0 2px 3px 2px rgba(0,0,0,0.2);
+    height: 100%;
+    -webkit-app-region: drag;
 }
 
-.mtiny-title-item{
-    display: block;
-    flex: 1;
-    line-height: 60px;
-    padding: 0 20px;
-    font-size: 15px;
-    color: #40444f;
-    text-align: center;
-    cursor: pointer;
-    -webkit-app-region: no-drag;
-}
-
-.mtiny-title-item:hover{
-    background: #ededed;
-}
-
-.mtiny-box{
-    width: 350px;
-    height: 190px;
-    margin: 50px auto 0;
-    border: 1.5px dashed #616778;
-    border-radius: 15px;
-}
-.mtiny-box-step{
-    width: 150px;
-    height: 56px;
-    margin: 50px auto 20px;
-    background: url(../images/main-bg.png) no-repeat center center / 60px;
-}
-
-.mtiny-box-step.dealling{
-    background: url(../images/tinify.png) no-repeat center center / 120px;
-}
-
-.mtiny-box-tips{
-    text-align: center;
-    font-size: 17px;
-    color: #40444f;
-}
-
-.mtiny-box-subtips {
-    margin: 10px auto 0;
-    font-size: 12px;
-    opacity: 0.7;
-}
-
-.mtiny-box-subtips.red{
-    opacity: 1;
-    color: #f94c00;
-}
 
 /*toast*/
 
@@ -286,4 +219,11 @@ body{
 .text-toast-on {
     -webkit-animation-name: text-toast-on;
     animation-name: text-toast-on;
+}
+
+.flex{
+    display: flex;
+}
+.flex-1{
+    flex: 1;
 }

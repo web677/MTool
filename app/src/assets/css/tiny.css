@@ -1,0 +1,47 @@
+/* tiny.html */
+
+body {
+    background: linear-gradient(to bottom, #c6dde4, #fefeff);
+    background: url(../images/body-bg.png) no-repeat center center / 100% 100%;
+    padding: 0;
+    height: 634px;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+
+.tiny-box {
+    width: 350px;
+    height: 190px;
+    margin: 50px auto 0;
+    border: 1.5px dashed #616778;
+    border-radius: 15px;
+}
+
+.tiny-box-step {
+    width: 150px;
+    height: 56px;
+    margin: 50px auto 20px;
+    background: url(../images/main-bg.png) no-repeat center center / 60px;
+}
+
+.tiny-box-step.dealling {
+    background: url(../images/tinify.png) no-repeat center center / 120px;
+}
+
+.tiny-box-tips {
+    text-align: center;
+    font-size: 17px;
+    color: #40444f;
+}
+
+.tiny-box-subtips {
+    margin: 10px auto 0;
+    font-size: 12px;
+    opacity: 0.7;
+}
+
+.tiny-box-subtips.red {
+    opacity: 1;
+    color: #f94c00;
+}

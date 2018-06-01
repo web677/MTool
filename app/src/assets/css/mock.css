@@ -1,0 +1,174 @@
+html,body{
+     -webkit-app-region: no-drag;
+}
+.CodeMirror {
+    font-size: 18px;
+    border: 1px solid #ece2e2;
+}
+
+.flex {
+    display: -webkit-flex;
+    display: flex;
+    align-items: center;
+}
+
+.flex-1 {
+    -webkit-flex: 1;
+    flex: 1;
+}
+
+.options-box {
+    display: block;
+    padding: 10px;
+    font-size: 16px;
+    color: #333;
+}
+
+.radio-protocol {
+    display: inline-block;
+    width: 150px;
+    height: 50px;
+    padding: 0 10px;
+    line-height: 50px;
+    font-size: 18px;
+}
+
+.btn-mock {
+    display: block;
+    width: 70%;
+    height: 40px;
+    margin: 20px auto;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.options-input {
+    width: 500px;
+    height: 25px;
+    font-size: 16px;
+    outline: none;
+}
+
+.result-box {
+    width: 70%;
+    height: 40px;
+    margin: 10px auto;
+    background: #555;
+    color: #fff;
+}
+
+.mock-result {
+    display: block;
+    border: 0;
+    background: transparent;
+    outline: none;
+    font-size: 16px;
+    color: #fff;
+    text-align: center;
+}
+
+.button-copy {
+    display: block;
+    width: 80px;
+    height: 40px;
+    font-size: 16px;
+    cursor: context-menu;
+    text-align: center;
+}
+
+/* request-box */
+
+.request-box {
+    margin: 50px auto;
+    padding: 10px;
+    border-top: 1px dashed #ccc;
+}
+
+.request-box h3 {
+    margin: 10px auto 0;
+}
+
+.request-box-tips {
+    margin: 5px auto;
+    padding: 0 24px;
+    font-size: 12px;
+    color: #999;
+}
+
+.request-list {
+    margin: 20px;
+    padding: 0;
+    border-bottom: 1px solid #ebebeb;
+}
+
+.request-item {
+    position: relative;
+    line-height: 40px;
+    padding: 0;
+    border-left: 1px solid #ebebeb;
+    font-size: 14px;
+    color: #333;
+    list-style: none;
+    overflow: hidden;
+}
+
+.request-item:first-child {
+    text-align: center;
+}
+
+.request-item[data-invalid="1"]:before {
+    content: "即将过期";
+    display: block;
+    top: 0;
+    left: -15px;
+    position: absolute;
+    width: 60px;
+    height: 16px;
+    line-height: 20px;
+    font-size: 10px;
+    text-align: center;
+    background: #000;
+    color: #fff;
+    opacity: 0.3;
+    transform: rotate(-30deg);
+}
+
+.request-item p {
+    margin: 0;
+    padding: 0 15px;
+    border-top: 1px solid #ebebeb;
+    border-right: 1px solid #ebebeb;
+    white-space: nowrap;
+    word-break: keep-all;
+    overflow: auto;
+}
+
+.request-item p.request-item-remove {
+    width: 180px;
+    height: 40px;
+    padding: 0;
+    border: 0;
+    border-top: 1px solid #ebebeb;
+    border-right: 1px solid #ebebeb;
+    outline: 0;
+    text-align: center;
+    cursor: pointer;
+}
+
+.request-item-remove button {
+    width: 50px;
+    height: 25px;
+    margin: 0 5px;
+    outline: none;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.request-empty {
+    display: none;
+    text-align: center;
+}
+
+.request-empty:last-child {
+    display: block;
+}

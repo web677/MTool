@@ -1,0 +1,39 @@
+
+/* index.html */
+body{
+    background: linear-gradient(to bottom, #c6dde4, #fefeff);
+}
+
+.mtool-title{
+    display: flex;
+    width: 100%;
+    height: 60px;
+    padding: 0 100px;
+    box-sizing: border-box;
+    background: rgba(255,255,255,0.8);
+    box-shadow: 0 2px 3px 2px rgba(0,0,0,0.2);
+}
+
+.mtool-title-item{
+    display: block;
+    flex: 1;
+    line-height: 60px;
+    padding: 0 20px;
+    font-size: 15px;
+    color: #40444f;
+    text-align: center;
+    cursor: pointer;
+     -webkit-app-region: no-drag;
+    -webkit-user-select: none;
+}
+
+.mtool-title-item:hover{
+    background: #ededed;
+}
+
+.main-webview {
+    width: 100%;
+    height: 434px;
+    overflow-x: hidden;
+     -webkit-app-region: no-drag;
+}

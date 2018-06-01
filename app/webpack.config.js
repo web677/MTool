@@ -3,12 +3,17 @@ var fs = require('fs')
 
 module.exports = {
     name: "mtiny",
-    entry: "./src/entry.js",
+    entry: {
+        main: "./src/entry/main.js",
+        tiny: "./src/entry/tiny.js",
+        sites: "./src/entry/sites.js",
+        mock: "./src/entry/mock.js"
+    },
     mode: "production",
     output: {
-        path: path.resolve(__dirname, 'src/assets/dist'),
+        path: path.resolve(__dirname, './static'),
         publicPath: "./",
-        filename: "app.js"
+        filename: "[name].js"
     },
     externals: [
         function (context, request, callback) {
