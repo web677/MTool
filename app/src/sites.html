@@ -11,7 +11,7 @@
     <div id="J_sites" class="sites-page flex">
         <ul class="sites-nav">
             <li class="sites-nav-title">MTool前端导航</li>
-            <li class="sites-nav-item" v-for="(item, key) in keys" :key="key">{{item}}</li>
+            <li class="sites-nav-item" :class="{current: key == current}" v-for="(item, key) in keys" :key="key" @click="loadSites(key)">{{item}}</li>
         </ul>
 
         <div class="sites-container flex-1">

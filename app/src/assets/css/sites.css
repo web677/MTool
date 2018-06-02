@@ -38,7 +38,7 @@ html,body {
     cursor: pointer;
 }
 
-.sites-nav-item:hover{
+.sites-nav-item:hover, .sites-nav-item.current{
     background: #F47D43;
     color: #fff;
 }

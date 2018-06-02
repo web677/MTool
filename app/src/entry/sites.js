@@ -1,6 +1,10 @@
+import $  from 'jquery'
 import Vue  from 'vue/dist/vue.esm.js'
+import Toast from '../assets/js/toast'
 
-var app = new Vue({
+const getSitesUrl = 'https://api.eshengeshu.com/mock/8e6c3cf647973776.json'
+
+const app = new Vue({
     el: '#J_sites',
     data: {
         current: 'hot',
@@ -10,44 +14,29 @@ var app = new Vue({
             'library': '优秀库',
             'community': '技术社区'
         },
-        sites: {
-            'hot': [
-                {
-                    name: 'Github',
-                    logo: 'http://www.fenav.com/src/images/index/group3/11.jpg',
-                    link: 'https://github.com/',
-                    description: '优秀的代码托管平台'
-                },{
-                    name: 'w3cSchool',
-                    logo: 'http://www.fenav.com/src/images/index/group3/11.jpg',
-                    link: 'http://www.w3school.com.cn/',
-                    description: '优秀的API查询平台'
-                },{
-                    name: 'Github',
-                    logo: 'http://www.fenav.com/src/images/index/group3/11.jpg',
-                    link: 'https://github.com/',
-                    description: '优秀的代码托管平台'
-                },{
-                    name: 'w3cSchool',
-                    logo: 'http://www.fenav.com/src/images/index/group3/11.jpg',
-                    link: 'http://www.w3school.com.cn/',
-                    description: '优秀的API查询平台'
-                },{
-                    name: 'Github',
-                    logo: 'http://www.fenav.com/src/images/index/group3/11.jpg',
-                    link: 'https://github.com/',
-                    description: '优秀的代码托管平台'
-                },{
-                    name: 'w3cSchool',
-                    logo: 'http://www.fenav.com/src/images/index/group3/11.jpg',
-                    link: 'http://www.w3school.com.cn/',
-                    description: '优秀的API查询平台'
-                }
-            ]
-        },
+        sites: { },
     },
     methods: {
-        
+        loadSites(item){
+            this.current = item
+        }
+    },
+    created(){
+        this.$watch('current', (key) => {
+            if(!this.sites[key]){
+                $.getJSON(getSitesUrl, {key: key})
+                    .then(res => {
+                        if(res.status == 1){
+                            this.sites[key] = res.data.sites
+                            this.$forceUpdate()
+                        }else{
+                            Toast.open(res.info)
+                        }
+                    })
+            }
+        }, {
+            immediate: true
+        })
     }
 })
 
