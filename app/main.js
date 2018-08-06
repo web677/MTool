@@ -96,7 +96,7 @@ template[3].submenu = [
 
 const menu = Menu.buildFromTemplate(template)
 
-function createWinow() {
+function createWindow() {
     mainWindow = new BrowserWindow({
         title: 'MTool',
         width: 800,
@@ -125,7 +125,7 @@ function createWinow() {
 
 }
 
-app.on('ready', createWinow)
+app.on('ready', createWindow)
 
 app.on('window-all-closed', () => {
     if (process.platform !== 'darwin') {
